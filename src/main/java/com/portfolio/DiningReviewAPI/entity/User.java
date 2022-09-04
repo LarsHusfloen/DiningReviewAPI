@@ -1,16 +1,12 @@
 package com.portfolio.DiningReviewAPI.entity;
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 
 import javax.persistence.*;
 
 @Entity
 @Table(name = "USER")
-@AllArgsConstructor
-@NoArgsConstructor
+@RequiredArgsConstructor
 @Getter
 @Setter
 public class User {
@@ -22,21 +18,19 @@ public class User {
     @Column(name = "NAME", unique = true)
     private String name;
 
+
     @Column(name = "CITY")
     private String city;
-
     @Column(name = "STATE")
     private String state;
-
     @Column(name = "ZIPCODE")
-    private Integer zipcode;
+    private String zipcode;
+
 
     @Column(name = "PEANUTALLERGIES")
     private Boolean peanutAllergies;
-
     @Column(name = "EGGALLERGIES")
     private Boolean eggAllergies;
-
     @Column(name = "DAIRYALLERGIES")
     private Boolean dairyAllergies;
 
