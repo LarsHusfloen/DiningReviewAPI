@@ -1,7 +1,9 @@
 package com.portfolio.DiningReviewAPI.entity;
 
 import com.portfolio.DiningReviewAPI.enums.ReviewStatus;
-import lombok.*;
+import lombok.Getter;
+import lombok.RequiredArgsConstructor;
+import lombok.Setter;
 
 import javax.persistence.*;
 
@@ -13,10 +15,10 @@ import javax.persistence.*;
 public class Review {
 
     @Id
-    @GeneratedValue(strategy= GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(name="SUBMITTEDBY")
+    @Column(name = "SUBMITTEDBY")
     private String submittedBy;
     @Column(name = "RESTAURANTID")
     private Long restaurantId;
