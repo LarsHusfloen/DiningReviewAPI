@@ -1,6 +1,5 @@
-package com.portfolio.DiningReviewAPI.entity;
+package com.portfolio.diningreviewapi.entity;
 
-import com.portfolio.DiningReviewAPI.enums.ReviewStatus;
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
 import lombok.Setter;
@@ -8,22 +7,25 @@ import lombok.Setter;
 import javax.persistence.*;
 
 @Entity
-@Table(name = "REVIEW")
+@Table(name = "RESTAURANT")
 @RequiredArgsConstructor
 @Getter
 @Setter
-public class Review {
+public class Restaurant {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(name = "SUBMITTEDBY")
-    private String submittedBy;
-    @Column(name = "RESTAURANTID")
-    private Long restaurantId;
-    @Column(name = "COMMENT")
-    private String comment;
+    @Column(name = "NAME")
+    private String name;
+
+    @Column(name = "CITY")
+    private String city;
+    @Column(name = "STATE")
+    private String state;
+    @Column(name = "ZIPCODE")
+    private String zipcode;
 
     @Column(name = "PEANUT")
     private Integer peanut;
@@ -32,6 +34,7 @@ public class Review {
     @Column(name = "DAIRY")
     private Integer dairy;
 
-    @Column(name = "STATUS")
-    private ReviewStatus status;
+    @Column(name = "AVERAGE")
+    private Integer average;
+
 }

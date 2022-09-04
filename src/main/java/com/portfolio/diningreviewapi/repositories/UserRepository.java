@@ -1,6 +1,6 @@
-package com.portfolio.DiningReviewAPI.repositories;
+package com.portfolio.diningreviewapi.repositories;
 
-import com.portfolio.DiningReviewAPI.entity.User;
+import com.portfolio.diningreviewapi.entity.User;
 import org.springframework.data.repository.CrudRepository;
 
 import java.util.List;

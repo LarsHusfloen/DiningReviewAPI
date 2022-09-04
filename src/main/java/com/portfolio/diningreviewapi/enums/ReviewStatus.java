@@ -1,4 +1,4 @@
-package com.portfolio.DiningReviewAPI.enums;
+package com.portfolio.diningreviewapi.enums;
 
 public enum ReviewStatus {
     APPROVED,

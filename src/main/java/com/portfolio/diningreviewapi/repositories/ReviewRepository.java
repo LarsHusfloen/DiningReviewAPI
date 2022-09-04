@@ -1,7 +1,7 @@
-package com.portfolio.DiningReviewAPI.repositories;
+package com.portfolio.diningreviewapi.repositories;
 
-import com.portfolio.DiningReviewAPI.entity.Review;
-import com.portfolio.DiningReviewAPI.enums.ReviewStatus;
+import com.portfolio.diningreviewapi.entity.Review;
+import com.portfolio.diningreviewapi.enums.ReviewStatus;
 import org.springframework.data.repository.CrudRepository;
 
 import java.util.List;

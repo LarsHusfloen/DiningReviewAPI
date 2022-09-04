@@ -1,4 +1,4 @@
-package com.portfolio.DiningReviewAPI.entity;
+package com.portfolio.diningreviewapi.entity;
 
 import lombok.Getter;
 import lombok.Setter;
