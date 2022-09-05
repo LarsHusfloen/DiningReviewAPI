@@ -7,33 +7,33 @@ import lombok.Setter;
 import javax.persistence.*;
 
 @Entity
-@Table(name = "USER")
+@Table(name = "USER1")
 @RequiredArgsConstructor
 @Getter
 @Setter
-public class User {
+public class User1 {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(name = "NAME", unique = true)
+    @Column(name = "`NAME`")
     private String name;
 
 
-    @Column(name = "CITY")
+    @Column(name = "`CITY`")
     private String city;
-    @Column(name = "STATE")
+    @Column(name = "`STATE`")
     private String state;
-    @Column(name = "ZIPCODE")
+    @Column(name = "`ZIPCODE`")
     private String zipcode;
 
 
-    @Column(name = "PEANUTALLERGIES")
+    @Column(name = "`PEANUTALLERGIES`")
     private Boolean peanutAllergies;
-    @Column(name = "EGGALLERGIES")
+    @Column(name = "`EGGALLERGIES`")
     private Boolean eggAllergies;
-    @Column(name = "DAIRYALLERGIES")
+    @Column(name = "`DAIRYALLERGIES`")
     private Boolean dairyAllergies;
 
 }

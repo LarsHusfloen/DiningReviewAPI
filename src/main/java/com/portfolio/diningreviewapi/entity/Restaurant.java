@@ -20,6 +20,8 @@ public class Restaurant {
     @Column(name = "NAME")
     private String name;
 
+    @Column(name = "ADDRESS")
+    private String address;
     @Column(name = "CITY")
     private String city;
     @Column(name = "STATE")
