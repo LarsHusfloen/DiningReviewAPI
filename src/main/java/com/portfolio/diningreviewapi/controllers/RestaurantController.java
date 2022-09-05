@@ -17,13 +17,13 @@ public class RestaurantController {
 
     private final RestaurantRepository restaurantRepository;
 
-    public RestaurantController(RestaurantRepository restaurantRepository){
+    public RestaurantController(RestaurantRepository restaurantRepository) {
         this.restaurantRepository = restaurantRepository;
     }
 
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
-    public Restaurant addRestaurant(@RequestBody Restaurant restaurant){
+    public Restaurant addRestaurant(@RequestBody Restaurant restaurant) {
         validateNewRestaurant(restaurant);
 
         return this.restaurantRepository.save(restaurant);
@@ -48,7 +48,7 @@ public class RestaurantController {
     public Iterable<Restaurant> searchRestaurants(@RequestParam String zipcode, @RequestParam String allergy) {
         validateZipCode(zipcode);
 
-        Iterable<Restaurant> restaurants = Collections.EMPTY_LIST;
+        Iterable<Restaurant> restaurants = Collections.emptyList();
         if ("peanut".equalsIgnoreCase(allergy)) {
             restaurants = restaurantRepository.findByZipcodeAndPeanutNotNullOrderByPeanut(zipcode);
         } else if ("dairy".equalsIgnoreCase(allergy)) {
